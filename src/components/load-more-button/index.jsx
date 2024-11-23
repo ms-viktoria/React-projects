@@ -1,18 +1,18 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 
 export default function LoadMoreData() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
-  const { disableButton, setDisableButton } = useState(false);
+  const [disableButton, setDisableButton] = useState(false);
 
   async function fetchProducts() {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://dummyjson.com/products?limit=20&skip=${count === 0 ? 0 : count * 20
+        `https://dummyjson.com/products?limit=20&skip=${
+          count === 0 ? 0 : count * 20
         }`
       );
 
@@ -32,6 +32,7 @@ export default function LoadMoreData() {
 
   useEffect(() => {
     fetchProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
 
   useEffect(() => {
@@ -47,20 +48,18 @@ export default function LoadMoreData() {
       <div className="product-container">
         {products && products.length
           ? products.map((item) => (
-            <div className="product" key={item.id}>
-              <img src={item.thumbnail} alt={item.title} />
-              <p>{item.title}</p>
-            </div>
-          ))
+              <div className="product" key={item.id}>
+                <img src={item.thumbnail} alt={item.title} />
+                <p>{item.title}</p>
+              </div>
+            ))
           : null}
       </div>
       <div className="button-container">
         <button disabled={disableButton} onClick={() => setCount(count + 1)}>
           Load More Products
         </button>
-        {
-          disableButton ? <p>You have reached to 100 products</p> : null
-        }
+        {disableButton ? <p>You have reached to 100 products</p> : null}
       </div>
     </div>
   );

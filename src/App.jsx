@@ -2,8 +2,11 @@ import "./App.css";
 import Accordion from "./components/accordion";
 import ImageSlider from "./components/image-slider";
 import LoadMoreData from "./components/load-more-button";
+import QrCodeGenerator from "./components/qr-code-generator/index.jsx";
 import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
+import menus from "./components/tree-view/data.js";
+import TreeView from "./components/tree-view/index.jsx";
 
 function App() {
   return (
@@ -30,15 +33,24 @@ function App() {
           page={"1"}
           limit={"10"}
         />
-        </div>
+      </div>
 
-        <div className="project">
+      <div className="project">
         {/* {Load more products component} */}
         <LoadMoreData />
-        </div>
-    
+      </div>
+
+      <div className="project">
+        {/* {Tree view component/menu UI component} */}
+        <TreeView menus={menus} />
+      </div>
+
+      <div className="project">
+        {/* {Qr code generator} */}
+        <QrCodeGenerator  />
+      </div>
+
     </div>
-    
   );
 }
 
