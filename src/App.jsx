@@ -1,9 +1,12 @@
 import "./App.css";
 import Accordion from "./components/accordion";
+import TabTest from "./components/custom-tabs/tab-test.jsx";
 import ImageSlider from "./components/image-slider";
+import LightDarkMode from "./components/light-dark-mode/index.jsx";
 import LoadMoreData from "./components/load-more-button";
 import QrCodeGenerator from "./components/qr-code-generator/index.jsx";
 import RandomColor from "./components/random-color";
+import ScrollIndicator from "./components/scroll-ndecator/index.jsx";
 import StarRating from "./components/star-rating";
 import menus from "./components/tree-view/data.js";
 import TreeView from "./components/tree-view/index.jsx";
@@ -47,9 +50,24 @@ function App() {
 
       <div className="project">
         {/* {Qr code generator} */}
-        <QrCodeGenerator  />
+        <QrCodeGenerator />
       </div>
 
+      <div className="project">
+        {/* {Light and dark mode} */}
+        <LightDarkMode />
+      </div>
+
+      <div className="project">
+        {/* {Scroll indicator component} */}
+        <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      </div>
+
+      <div className="project">
+        {/* {Custom tabs component} */}
+        <TabTest />
+      </div>
+      
     </div>
   );
 }
