@@ -8,7 +8,8 @@ import LightDarkMode from "./components/light-dark-mode/index.jsx";
 import LoadMoreData from "./components/load-more-button";
 import QrCodeGenerator from "./components/qr-code-generator/index.jsx";
 import RandomColor from "./components/random-color";
-import ScrollIndicator from "./components/scroll-ndecator/index.jsx";
+import ScrollIndicator from "./components/scroll-indicator/index.jsx";
+import SearchAutocomplete from "./components/search-autocomplete-wih-api/index.jsx";
 import StarRating from "./components/star-rating";
 import menus from "./components/tree-view/data.js";
 import TreeView from "./components/tree-view/index.jsx";
@@ -78,6 +79,11 @@ function App() {
       <div className="project">
         {/* {Github profile finder} */}
         <GithubProfileFinder />
+      </div>
+
+      <div className="project">
+        {/* {Search Autocomplete} */}
+        <SearchAutocomplete />
       </div>
       
     </div>
