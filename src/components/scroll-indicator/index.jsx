@@ -63,7 +63,7 @@ export default function ScrollIndicator({ url }) {
   }
 
   return (
-    <div>
+    <>
       <div className="top-container">
         <h1>Custom Scroll Indicator</h1>
         <div className="scroll-progress-tracking-container">
@@ -78,6 +78,6 @@ export default function ScrollIndicator({ url }) {
           ? data.map((dataItem) => <p>{dataItem.title}</p>)
           : null}
       </div>
-    </div>
+    </>
   );
 }

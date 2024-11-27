@@ -11,6 +11,7 @@ import RandomColor from "./components/random-color";
 import ScrollIndicator from "./components/scroll-indicator/index.jsx";
 import SearchAutocomplete from "./components/search-autocomplete-wih-api/index.jsx";
 import StarRating from "./components/star-rating";
+import TicTacToe from "./components/tic-tac-toe/index.jsx";
 import menus from "./components/tree-view/data.js";
 import TreeView from "./components/tree-view/index.jsx";
 
@@ -19,46 +20,46 @@ function App() {
     <div className="App">
       <div className="project">
         {/* {Accordion component} */}
-        <Accordion />
+        {/* <Accordion /> */}
       </div>
 
       <div className="project">
         {/* {Random color component} */}
-        <RandomColor />
+        {/* <RandomColor /> */}
       </div>
 
       <div className="project">
         {/* {Star rating component} */}
-        <StarRating noOfStars={10} />
+        {/* <StarRating noOfStars={10} /> */}
       </div>
 
       <div className="project">
         {/* {Image slider component} */}
-        <ImageSlider
+        {/* <ImageSlider
           url={"https://picsum.photos/v2/list"}
           page={"1"}
           limit={"10"}
-        />
+        /> */}
       </div>
 
       <div className="project">
         {/* {Load more products component} */}
-        <LoadMoreData />
+        {/* <LoadMoreData /> */}
       </div>
 
       <div className="project">
         {/* {Tree view component/menu UI component} */}
-        <TreeView menus={menus} />
+        {/* <TreeView menus={menus} /> */}
       </div>
 
       <div className="project">
         {/* {Qr code generator} */}
-        <QrCodeGenerator />
+        {/* <QrCodeGenerator /> */}
       </div>
 
       <div className="project">
         {/* {Light and dark mode} */}
-        <LightDarkMode />
+        {/* <LightDarkMode /> */}
       </div>
 
       <div className="project">
@@ -68,22 +69,27 @@ function App() {
 
       <div className="project">
         {/* {Custom tabs component} */}
-        <TabTest />
+        {/* <TabTest /> */}
       </div>
 
       <div className="project">
         {/* {Custom modal component} */}
-        <ModalTest />
+        {/* <ModalTest /> */}
       </div>
 
       <div className="project">
         {/* {Github profile finder} */}
-        <GithubProfileFinder />
+        {/* <GithubProfileFinder /> */}
       </div>
 
       <div className="project">
         {/* {Search Autocomplete} */}
-        <SearchAutocomplete />
+        {/* <SearchAutocomplete /> */}
+      </div>
+
+      <div className="project">
+        {/* {Tic-tac-toe} */}
+        <TicTacToe />
       </div>
       
     </div>
