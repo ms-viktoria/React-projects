@@ -2,6 +2,7 @@ import "./App.css";
 import Accordion from "./components/accordion";
 import ModalTest from "./components/custom-modal-popup/modal-test.jsx";
 import TabTest from "./components/custom-tabs/tab-test.jsx";
+import FeatureFlags from "./components/feature-flag/index.jsx";
 import GithubProfileFinder from "./components/github-profile-finder/index.jsx";
 import ImageSlider from "./components/image-slider";
 import LightDarkMode from "./components/light-dark-mode/index.jsx";
@@ -14,6 +15,7 @@ import StarRating from "./components/star-rating";
 import TicTacToe from "./components/tic-tac-toe/index.jsx";
 import menus from "./components/tree-view/data.js";
 import TreeView from "./components/tree-view/index.jsx";
+import FeatureFlagsGlobalState from "./components/feature-flag/context/index.jsx"
 
 function App() {
   return (
@@ -64,7 +66,7 @@ function App() {
 
       <div className="project">
         {/* {Scroll indicator component} */}
-        <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+        {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
       </div>
 
       <div className="project">
@@ -89,9 +91,15 @@ function App() {
 
       <div className="project">
         {/* {Tic-tac-toe} */}
-        <TicTacToe />
+        {/* <TicTacToe /> */}
       </div>
-      
+
+      <div className="project">
+        {/* {Feature Flags Implementation} */}
+        <FeatureFlagsGlobalState>
+          <FeatureFlags />
+        </FeatureFlagsGlobalState>
+      </div>
     </div>
   );
 }
