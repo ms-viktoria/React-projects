@@ -2,11 +2,11 @@ import { useContext } from "react";
 import Accordion from "../accordion";
 import LightDarkMode from "../light-dark-mode";
 import RandomColor from "../random-color";
-import TreeView from "../tree-view";
-import menus from "../tree-view/data";
 import TicTacToe from "../tic-tac-toe";
-import TabTest from "../custom-tabs/tab-test";
+import TreeView from "../tree-view";
 import { FeatureFlagsContext } from "./context";
+import menus from "../tree-view/data";
+import TabTest from "../custom-tabs/tab-test";
 
 export default function FeatureFlags() {
   const { loading, enabledFlags } = useContext(FeatureFlagsContext);
@@ -30,11 +30,11 @@ export default function FeatureFlags() {
     },
     {
       key: "showTreeView",
-      component: <TreeView menus={menus} />,
+      component: <TreeView  menus={menus} />,
     },
     {
-      key: "showTabs",
-      component: <TabTest />,
+        key : 'showTabs',
+        component : <TabTest/>
     }
   ];
 
