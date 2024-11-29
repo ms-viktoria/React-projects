@@ -17,6 +17,8 @@ import menus from "./components/tree-view/data.js";
 import TreeView from "./components/tree-view/index.jsx";
 import FeatureFlagsGlobalState from "./components/feature-flag/context/index.jsx";
 import UseFetchHookTest from "./components/use-fetch/test.jsx";
+import UseOnclickOutsideTest from "./components/use-outside-click/test.jsx";
+import UseWindowResizeTest from "./components/use-window-resize/test.jsx";
 
 function App() {
   return (
@@ -103,9 +105,20 @@ function App() {
       </div>
 
       <div className="project">
-        {/* {useFetch - Custom Hook} */}
-        <UseFetchHookTest />
+        {/* {UseFetch - Custom Hook Test} */}
+        {/* <UseFetchHookTest /> */}
       </div>
+
+      <div className="project">
+        {/* {Use Onclick Outside Hook Test} */}
+        {/* <UseOnclickOutsideTest /> */}
+      </div>
+
+      <div className="project">
+        {/* {Use Window Resize Hook Test} */}
+        <UseWindowResizeTest />
+      </div>
+
     </div>
   );
 }
