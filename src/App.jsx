@@ -19,6 +19,8 @@ import FeatureFlagsGlobalState from "./components/feature-flag/context/index.jsx
 import UseFetchHookTest from "./components/use-fetch/test.jsx";
 import UseOnclickOutsideTest from "./components/use-outside-click/test.jsx";
 import UseWindowResizeTest from "./components/use-window-resize/test.jsx";
+import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom/index.jsx";
+import ScrollToSection from "./components/scroll-to-top-and-bottom/scroll-to-section.jsx";
 
 function App() {
   return (
@@ -116,7 +118,17 @@ function App() {
 
       <div className="project">
         {/* {Use Window Resize Hook Test} */}
-        <UseWindowResizeTest />
+        {/* <UseWindowResizeTest /> */}
+      </div>
+
+      <div className="project">
+        {/* {Scroll to Top and Bottom} */}
+        {/* <ScrollToTopAndBottom /> */}
+      </div>
+
+      <div className="project">
+        {/* {Scroll to a Particular Section} */}
+        <ScrollToSection />
       </div>
 
     </div>
